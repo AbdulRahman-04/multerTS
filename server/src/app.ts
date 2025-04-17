@@ -16,6 +16,8 @@ app.post("/upload", upload.single("file"), (req: Request, res: Response): void =
     return;
   }
 
+  console.log("File uploaded✅");
+  
   res.status(200).json({
     msg: "✅ File uploaded successfully!",
     fileInfo: {
